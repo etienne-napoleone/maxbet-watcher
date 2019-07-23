@@ -1,6 +1,6 @@
 <template>
   <div class="pt-6 text-center text-gray-700">
-    <p class="pb-4">history</p>
+    <p class="pb-4">live results</p>
     <p v-for="bet in history" :key="bet.index" v-bind:class="{'text-green-500':bet.result > 0, 'text-red-500':bet.result < 0}">
       {{bet.result}}
     </p>

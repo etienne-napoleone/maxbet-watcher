@@ -8,12 +8,18 @@
 </template>
 
 <script>
-import { mapState } from "vuex"
+import { mapState, mapActions } from "vuex"
 
 export default {
   name: "Balance",
+  methods: {
+    ...mapActions(["fetchBalance"])
+  },
   computed: {
     ...mapState(["balance"])
+  },
+  created(){
+    this.fetchBalance()
   }
 }
 </script>
