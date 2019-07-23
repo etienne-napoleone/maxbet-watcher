@@ -1,8 +1,8 @@
 <template>
   <div class="pt-6 text-center text-gray-700">
-    <p class="pb-4">history</p>
-    <p v-for="change in history" :key="change" v-bind:class="{'text-green-500':change > 0, 'text-red-500':change < 0}">
-      {{change}}
+    <p class="pb-4">session</p>
+    <p v-bind:class="{'text-green-500':history > 0, 'text-red-500':history < 0}">
+      {{history}}
     </p>
   </div>
 </template>
