@@ -4,7 +4,6 @@
     <p v-bind:class="{'text-green-500':balance > 0, 'text-red-500':balance < 0}" class="text-3xl">
       ${{balance}}
     </p>
-    <button @click="fetchBalance">test</button>
   </div>
 </template>
 
