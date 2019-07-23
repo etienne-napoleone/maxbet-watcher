@@ -10,7 +10,7 @@ import Balance from '@/components/Balance.vue'
 import History from '@/components/History.vue'
 
 export default {
-  name: 'home',
+  name: "home",
   components: {
     Balance,
     History

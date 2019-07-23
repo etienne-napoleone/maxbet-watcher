@@ -4,6 +4,7 @@
     <p v-bind:class="{'text-green-500':balance > 0, 'text-red-500':balance < 0}" class="text-3xl">
       ${{balance}}
     </p>
+    <button @click="fetchBalance">test</button>
   </div>
 </template>
 
@@ -12,6 +13,11 @@ import { mapState, mapActions } from "vuex"
 
 export default {
   name: "Balance",
+  data () {
+    return {
+      timer: undefined
+    }
+  },
   methods: {
     ...mapActions(["fetchBalance"])
   },
@@ -19,7 +25,11 @@ export default {
     ...mapState(["balance"])
   },
   created(){
+    this.timer = setInterval(() => this.fetchBalance(), 2000)
     this.fetchBalance()
+  },
+  beforeDestroy() {
+    clearInterval(this.timer)
   }
 }
 </script>
