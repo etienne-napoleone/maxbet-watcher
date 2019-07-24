@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/etienne-napoleone/maxbet-watcher.svg?branch=develop)](https://travis-ci.org/etienne-napoleone/maxbet-watcher)
 
 Vue.js test app.
-Lets you see the current benefit/deficit of the pool and current session.
+Lets you see the current benefit/deficit of the [Maxbet](https://maxbet.pigfarm.io/) pool and current session.
 
 uses:
 
