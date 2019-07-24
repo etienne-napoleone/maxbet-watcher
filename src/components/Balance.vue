@@ -15,24 +15,21 @@ export default {
   name: "Balance",
   data () {
     return {
-      timer: undefined
+      timer: null
     }
   },
   methods: {
     ...mapActions(["fetchBalance"]),
-    loop: function () {
-      this.timer = setTimeout(() => {
-        this.fetchBalance()
-        this.loop()
-      }, 2000)
+    async fetch() {
+      this.fetchBalance()
+      this.timer = setTimeout(() => this.fetch(), 2000)
     }
   },
   computed: {
     ...mapState(["balance"])
   },
   created(){
-    this.fetchBalance()
-    this.loop()
+    this.fetch()
   },
   beforeDestroy() {
     clearTimeout(this.timer)
