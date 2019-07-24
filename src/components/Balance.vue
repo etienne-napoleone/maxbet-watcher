@@ -9,6 +9,7 @@
 
 <script>
 import { mapState, mapActions } from "vuex"
+import { setTimeout } from 'timers';
 
 export default {
   name: "Balance",
@@ -18,17 +19,23 @@ export default {
     }
   },
   methods: {
-    ...mapActions(["fetchBalance"])
+    ...mapActions(["fetchBalance"]),
+    loop: function () {
+      this.timer = setTimeout(() => {
+        this.fetchBalance()
+        this.loop()
+      }, 2000)
+    }
   },
   computed: {
     ...mapState(["balance"])
   },
   created(){
-    this.timer = setInterval(() => this.fetchBalance(), 2000)
     this.fetchBalance()
+    this.loop()
   },
   beforeDestroy() {
-    clearInterval(this.timer)
+    clearTimeout(this.timer)
   }
 }
 </script>
