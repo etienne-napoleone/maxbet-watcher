@@ -21,7 +21,7 @@ export default {
   methods: {
     ...mapActions(["fetchBalance"]),
     async fetch() {
-      this.fetchBalance()
+      await this.fetchBalance()
       this.timer = setTimeout(() => this.fetch(), 2000)
     }
   },
