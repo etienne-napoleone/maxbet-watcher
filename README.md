@@ -1,4 +1,15 @@
 # maxbet-watcher
+[![Build Status](https://travis-ci.org/etienne-napoleone/maxbet-watcher.svg?branch=develop)](https://travis-ci.org/etienne-napoleone/maxbet-watcher)
+
+Vue.js test app.
+Lets you see the current benefit/deficit of the [Maxbet](https://maxbet.pigfarm.io/) pool and current session.
+
+uses:
+
+- vue
+- vuex
+- tailwindcss
+- web3
 
 ## Project setup
 ```
@@ -15,15 +26,7 @@ yarn run serve
 yarn run build
 ```
 
-### Run your tests
-```
-yarn run test
-```
-
 ### Lints and fixes files
 ```
 yarn run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

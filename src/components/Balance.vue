@@ -9,32 +9,30 @@
 
 <script>
 import { mapState, mapActions } from "vuex"
+import { setTimeout } from 'timers';
 
 export default {
   name: "Balance",
   data () {
     return {
-      timer: undefined
+      timer: null
     }
   },
   methods: {
-    ...mapActions(["fetchBalance"])
+    ...mapActions(["fetchBalance"]),
+    async fetch() {
+      this.fetchBalance()
+      this.timer = setTimeout(() => this.fetch(), 2000)
+    }
   },
   computed: {
     ...mapState(["balance"])
   },
   created(){
-    this.timer = setInterval(() => this.fetchBalance(), 2000)
-    this.fetchBalance()
+    this.fetch()
   },
   beforeDestroy() {
-    clearInterval(this.timer)
+    clearTimeout(this.timer)
   }
 }
 </script>
-
-<style scoped>
-*{
-  font-family: 'Rubik Mono One', sans-serif;
-}
-</style>

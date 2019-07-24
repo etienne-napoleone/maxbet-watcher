@@ -14,8 +14,8 @@ export default {
 
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap');
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Rubik Mono One', sans-serif;
 }
 </style>

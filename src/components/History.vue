@@ -10,7 +10,6 @@
 <script>
 import { mapState } from "vuex"
 
-// emit DrawBet(bet.player, bet.round, bet.gameType, bet.index, bet.number, bet.isOver, bet.amount, bet.isFinished, bet.luckyNumber);
 export default {
   name: 'History',
   computed: {
@@ -18,9 +17,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-*{
-  font-family: 'Rubik Mono One', sans-serif;
-}
-</style>
