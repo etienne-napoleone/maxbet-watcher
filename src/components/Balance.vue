@@ -39,9 +39,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-*{
-  font-family: 'Rubik Mono One', sans-serif;
-}
-</style>
